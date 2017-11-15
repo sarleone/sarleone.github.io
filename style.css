@@ -1,0 +1,35 @@
+h1 {
+	font-family: "Courier New";
+	padding-top: 100px;
+	padding-bottom: 50px;
+	margin: auto;
+}
+
+h3 {
+	font-family: "Courier New";
+	padding-bottom: 25px;
+}
+
+img {
+	display: block;
+	margin: auto;
+	height: 60%;
+	padding-bottom: 25px;
+}
+
+p {
+	font-family: arial;
+}
+
+body {
+	background: #b3e6b3;
+}
+
+li {
+	font-family: arial;
+}
+
+iframe {
+	display: block;
+	margin: auto;
+}
