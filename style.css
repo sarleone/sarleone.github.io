@@ -13,8 +13,10 @@ h3 {
 img {
 	display: block;
 	margin: auto;
+	border-radius: 12px 12px;
 	height: 60%;
 	padding-bottom: 25px;
+
 }
 
 p {
@@ -33,3 +35,16 @@ iframe {
 	display: block;
 	margin: auto;
 }
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	font-family: arial;
+	border::1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
