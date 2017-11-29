@@ -12,6 +12,8 @@ header {
 
 }
 
+
+
 body {
 	margin-top: 0px;
 	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
@@ -33,7 +35,7 @@ h1 {
 	display: inline-block;	
 	position: relative;
 	background-color: #4aaaa5;
-	color: white;
+	color: white !important;
 	float: left;
 	padding: 30px;
 	margin-left: 100px;
@@ -42,7 +44,6 @@ h1 {
 
 .menu_bar {
 	margin-left: 769px;
-	color: #dde;
 	padding-top: 15px;
 	letter-spacing: 2px;
 }
@@ -85,13 +86,29 @@ h1 {
 	padding-right: 20px;
 }
 
+a {
+	text-decoration: none;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #d9d9d9;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: underline;
+}
 p {
 	color: #777777;
 }
 
-a:visited {
-	color: #4aaaa5;
-}
 
 .sidebar {
 	position: absolute;
@@ -145,6 +162,14 @@ footer {
 	bottom: 0;
 	width: 100%;
 
+}
+
+form {
+	color: #666666;
+}
+
+input {
+	color: #d9d9d9;
 }
 
 .portfolio_img{
