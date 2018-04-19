@@ -1,222 +1,250 @@
 <!DOCTYPE html>
-
-<html lang="en-us">
+<html lang="en">
 
   <head>
 
-    <meta charset="UTF-8">
-    <title>Train Scheduler</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Sarah Leone's Portfolio</title>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- LINK TO FIREBASE GOES HERE -->
-    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
-
-    <!-- Added Moment JS -->
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.min.css" rel="stylesheet">
 
   </head>
 
-  <body>
+  <body id="page-top">
+    <!-- Navigation -->
+    <a class="menu-toggle rounded" href="#">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a class="js-scroll-trigger" href="#page-top">Sarah Leone</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#page-top">Home</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#about">About</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#services">Services</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
 
-    <div class="container">
-
-      <br>
-
-      <!-- Jumbotron -->
-      <div class="jumbotron">
-        <h1 class="text-center">Train Scheduler</h1>
-        <h3 class= "text-center"> Don't get stuck in the cold</h3>
+    <!-- Header -->
+    <header class="masthead d-flex">
+      <div class="container text-center my-auto">
+        <h1 class="mb-1" style="color: white">Sarah Leone</h1>
+        <h3 class="mb-5" style="color: white">
+          <em>Full Stack Developer</em>
+        </h3>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="https://www.linkedin.com/in/sarah-leone/" target="_blank">Find Out More</a>
       </div>
+      <div class="overlay"></div>
+    </header>
 
-      <div class="row">
-
-        <!-- Wells for displaying all users -->
-        <div class="col-lg-12">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Current Train Schedule</h3>
-            </div>
-            <div class="panel-body">
-              <table class="table table-hover" id="train-table">
-                <thread>
-                  <tr>
-                    <th>Train Name</th>
-                    <th>Destination</th>
-                    <th>Frequency (min)</th>
-                    <th>Next Arrival</th>
-                    <th>Minutes Away</th>
-                  </tr>
-                </thread>
-              </table>
-            </div>
+    <!-- About -->
+    <section class="content-section bg-light" id="about">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h2>Seeking a full stack developer position in Chicago!</h2>
+            <p class="lead mb-5">Check out my LinkedIn profile 
+              <a href="https://www.linkedin.com/in/sarah-leone-225395b/" target="_blank">here</a>!</p>
+            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">Look what I can do</a>
           </div>
         </div>
-        <!-- Add Train -->
-        <div class="col-lg-12">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Add Train</h3>
-            </div>
+      </div>
+    </section>
 
-            <div class="panel-body">
-
-              <!-- Adding Train Info -->
-              <form role="form">
-                <div class="form-group">
-                  <label for="name-input">Train Name</label>
-                  <input class="form-control" id="name-input" type="text">
-                </div>
-                <div class="form-group">
-                  <label for="destination-input">Destination</label>
-                  <input class="form-control" id="destination-input" type="text">
-                </div>
-                <div class="form-group">
-                  <label for="time-input">First Train Time (HH:mm - military time)</label>
-                  <input class="form-control" id="fTime-input" type="time">
-                </div>
-                <div class="form-group">
-                 <label for="freq-input">Frequency (min)</label>
-                 <input class="form-control" id="freq-input" type="number">
-                 </div>
-                <button class="btn btn-default" id="add-train" type="submit">Submit</button>
-              </form>
-            
-            </div>
-
-          </div>
-
+    <!-- Services -->
+    <section class="content-section bg-primary text-white text-center" id="services">
+      <div class="container">
+        <div class="content-section-heading">
+          <h3 class="text-secondary mb-0">technical</h3>
+          <h2 class="mb-5">skills</h2>
         </div>
-      
-      </div>  
-    
-    </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <span class="service-icon rounded-circle mx-auto mb-3">
+              <i class="fas fa-leaf"></i>
+            </span>
+            <h4>
+              <strong>MongoDB</strong>
+            </h4>
+            <p class="text-faded mb-0">store data</p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <span class="service-icon rounded-circle mx-auto mb-3">
+              <p class="font-size: 100px">ex</p>
+            </span>
+            <h4>
+              <strong>Express</strong>
+            </h4>
+            <p class="text-faded mb-0">framework</p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+            <span class="service-icon rounded-circle mx-auto mb-3">
+              <i class="fab fa-react" style="font-size: 50px"></i></i>
+            </span>
+            <h4>
+              <strong>React</strong>
+            </h4>
+            <p class="text-faded mb-0">js library</p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <span class="service-icon rounded-circle mx-auto mb-3">
+              <i class="fab fa-node-js" style="font-size: 50px"></i></i>
+            </span>
+            <h4>
+              <strong>Node</strong>
+            </h4>
+            <p class="text-faded mb-0">implement</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Callout -->
+    <section class="callout">
+      <div class="container text-center">
+        <h2 class="mx-auto mb-5">Check out my latest projects on Github</h2>
+        <a class="btn btn-primary btn-xl" href="https://github.com/sarleone" target="_blank"><i class="fab fa-github" style="font-size: 50px"></i></a>
+      </div>
+    </section>
 
-    <!-- Script -->
-    <script>
+    <!-- Portfolio -->
+    <section class="content-section" id="portfolio">
+      <div class="container">
+        <div class="content-section-heading text-center">
+          <h3 class="text-secondary mb-0">Portfolio</h3>
+          <h2 class="mb-5">Recent Projects</h2>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="https://mighty-river-87183.herokuapp.com/" target="_blank">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Rupaul's Drag Race Clicky Game</h2>
+                  <p class="mb-0">A memory game made using MERN</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/dragrace.jpg" alt="clicky game">
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="https://serene-tor-77969.herokuapp.com/" target="_blank">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Friend Finder</h2>
+                  <p class="mb-0">An app to find a friend that matches your interests using Expres</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/friendfinder.jpg" alt="friends">
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="https://evening-spire-30059.herokuapp.com/burgers" target="_blank">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Build a Burger</h2>
+                  <p class="mb-0">An app to build and devour the burger of your dreams using Express and Handlebars</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/burger.jpg" alt="burger">
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="https://radiant-coast-17649.herokuapp.com/" target="_blank">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>StarWars Character Creator</h2>
+                  <p class="mb-0">Create a portfolio with statistics for your favorite StarWars characters built in Express</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/starwars.jpg" alt="starwars">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    // ========================================== START CODING BELOW!!
+    <!-- Call to Action
+    <section class="content-section bg-primary text-white">
+      <div class="container text-center">
+        <h2 class="mb-4">The buttons below are impossible to resist...</h2>
+        <a href="#" class="btn btn-xl btn-light mr-4">Click Me!</a>
+        <a href="#" class="btn btn-xl btn-dark">Look at Me!</a>
+      </div>
+    </section> -->
 
-    // Initialize Firebase
-    var config = {
-    apiKey: "AIzaSyDousEl7N1IfYQxHdK8koQaqqfmwCrR_Bk",
-    authDomain: "train-scheduler-524ea.firebaseapp.com",
-    databaseURL: "https://train-scheduler-524ea.firebaseio.com",
-    projectId: "train-scheduler-524ea",
-    storageBucket: "",
-    messagingSenderId: "472874615670"
-    };
+    <!-- Map -->
+    <section id="contact" class="map">
+      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5926.58993034856!2d-87.69117909970744!3d42.036867999415755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd018e9475cdb%3A0xff530227c4dcbac5!2s1029+Wesley+Ave%2C+Evanston%2C+IL+60202!5e0!3m2!1sen!2sus!4v1524170234184" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <br/>
+      <small>
+        <a href="https://www.google.com/maps/place/1029+Wesley+Ave,+Evanston,+IL+60202/@42.0368541,-87.693332,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd018e9475cdb:0xff530227c4dcbac5!8m2!3d42.0368501!4d-87.6911433"></a>
+      </small>
+    </section>
 
-    firebase.initializeApp(config);
+    <!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container">
+        <ul class="list-inline mb-5">
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="https://www.facebook.com/sarah.m.leone.7" target="_blank">
+              <i class="icon-social-facebook"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="https://twitter.com/sarahmleone" target="_blank">
+              <i class="icon-social-twitter"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white" href="#" target="_blank">
+              <i class="icon-social-github"></i>
+            </a>
+          </li>
+        </ul>
+        <p class="text-muted small mb-0">Copyright &copy; Sarah Leone 2017</p>
+      </div>
+    </footer>
 
-    var dataRef = firebase.database();
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
 
-    // Capture Button Click
-    $("#add-train").on("click", function(event) {
-      event.preventDefault();
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-      // YOUR TASK!!!
-      // Code in the logic for storing and retrieving the most recent user.
-      // Don't forget to provide initial data to your Firebase database.
-      var name = $("#name-input").val().trim();
-      var destination = $("#destination-input").val().trim();
-      var fTime = moment($("#fTime-input").val(), "hh:mm").format("X");
-      var freq = $("#freq-input").val().trim();
-      // Object and Code for the push
-      
-      var newTrain = {
-        name: name,
-        destination: destination,
-        fTime: fTime,
-        freq: freq
-      };
-  
-      dataRef.ref().push(newTrain);
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-      //log added train to console
-      console.log(newTrain.name);
-      console.log(newTrain.destination);
-      console.log(newTrain.fTime);
-      console.log(newTrain.freq);
-
-      //Clears the text boxes
-      $("#name-input").val("");
-      $("#destination-input").val("");
-      $("#fTime-input").val("");
-      $("#freq-input").val("");
-    });
-
-    // Firebase watcher + initial loader HINT: This code behaves similarly to .on("value")
-    dataRef.ref().on("child_added", function(childSnapshot, prevChildKey) {
-
-      //console log snapshot
-      console.log(childSnapshot.val());
-
-      //Store everything into a variable
-      var name = childSnapshot.val().name;
-      var destination = childSnapshot.val().destination;
-      var fTime = childSnapshot.val().fTime;
-      var freq = childSnapshot.val().freq;
-
-      // Log everything that's coming out of snapshot
-      console.log(name);
-      console.log(destination);
-      console.log(fTime);
-      console.log(freq);
-
-      // First Time (pushed back 1 year to make sure it comes before current time)
-      var firstTimeConverted = moment(fTime, "hh:mm").subtract(1, "years");
-      console.log(firstTimeConverted);
-
-       // Current Time
-      var currentTime = moment();
-      console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
-
-      // Difference between the times
-      var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
-      console.log("DIFFERENCE IN TIME: " + diffTime);
-
-      // Time apart (remainder)
-      var tRemainder = diffTime % freq;
-      console.log(tRemainder);
-
-      // Minute Until Train
-      var minuteAway = freq - tRemainder;
-      console.log("MINUTES TILL TRAIN: " + minuteAway);
-   
-      // Next Train
-      var nextArrival = moment().add(minuteAway, "minutes");
-      console.log("ARRIVAL TIME: " + moment(nextArrival).format("hh:mm"));
-      var nextTrain = moment(nextArrival).format("hh:mm");
-
-
-      // full list of items to the well
-       $("#train-table > tbody").append("<tr><td>" + name + "</td><td>" + destination + "</td><td>" +
-      freq + "</td><td>" + nextTrain  + "</td><td>" + minuteAway + "</td><td>");
-
-      // Handle the errors
-      }, function(errorObject) {
-        console.log("Errors handled: " + errorObject.code);
-    });
-
-    // dataRef.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot) {
-
-    //   // Change the HTML to reflect
-    //   $("#name-display").text(snapshot.val().name);
-    //   $("#destination-display").text(snapshot.val().destination);
-    //   $("#fTime-display").text(snapshot.val().fTime);
-    //   $("#freq-display").text(snapshot.val().freq);
-    // });
-
-    </script>
+    <!-- Custom scripts for this template -->
+    <script src="js/stylish-portfolio.min.js"></script>
 
   </body>
 
 </html>
-
