@@ -106,12 +106,13 @@ h6 {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2em;
 }
 
 @media (min-width: 992px) {
-  .masthead {
+/*   .masthead {
     height: 100vh;
-  }
+  } */
   .masthead h1 {
     font-size: 5.5rem;
   }
