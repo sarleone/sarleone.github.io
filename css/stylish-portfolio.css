@@ -99,6 +99,10 @@ h6 {
   padding: 0;
 }
 
+.headshot {
+  border-radius: 50%;
+}
+
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
