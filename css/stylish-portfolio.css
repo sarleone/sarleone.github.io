@@ -101,6 +101,8 @@ h6 {
 
 .headshot {
   border-radius: 50%;
+  width:350px;
+  height: 350px;
 }
 
 @media (min-width: 992px) {
