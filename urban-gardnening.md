@@ -55,12 +55,10 @@
     <!-- Header -->
     <header class="masthead d-flex">
       <div class="container text-center my-auto">
-        <h1 class="mb-1" style="color: white">Sarah Leone</h1>
+        <h1 class="mb-1" style="color: white">Urban Gardening In Evanston</h1>
         <h3 class="mb-5" style="color: white">
-          <em>Web Developer</em>
+          <em>Researching Land and Accumulating Resources for starting urban gardens</em>
         </h3>
-        <img src="img/Leone_Headshot.png" alt="Sarah Headshot" class="headshot">
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="https://www.linkedin.com/in/sarah-leone/" target="_blank">Find Out More</a>
       </div>
       <div class="overlay"></div>
     </header>
@@ -70,10 +68,8 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <h2>Seeking a web developer position in Chicago!</h2>
-            <p class="lead mb-5">Check out my resume
-              <a href="documents/LeoneResume.pdf" target="_blank">here</a>!</p>
-            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">Look what I can do</a>
+            <h2>About</h2>
+            <p class="lead mb-5">My neighborhood is predominantly Black and brown, although it is quickly gentrifying and pushing people out. It is more important than ever for us to reclaim our lands and use them for the public good. I am a master gardener, urban ecosystems agriculturalist and concerned citizen.</p>
           </div>
         </div>
       </div>
@@ -83,47 +79,12 @@
     <section class="content-section bg-primary text-white text-center" id="services">
       <div class="container">
         <div class="content-section-heading">
-          <h3 class="text-secondary mb-0">technical</h3>
-          <h2 class="mb-5">skills</h2>
+          <h3 class="text-secondary mb-0">preliminary research</h3>
+          <h2 class="mb-5">Planning Stage</h2>
         </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="fab fa-html5"></i>
-            </span>
-            <h4>
-              <strong>HTML5</strong>
-            </h4>
-            <p class="text-faded mb-0"></p>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="fab fa-css3"></i>
-            </span>
-            <h4>
-              <strong>CSS3</strong>
-            </h4>
-            <p class="text-faded mb-0"></p>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <p class="font-size: 100px">< / ></p>
-            </span>
-            <h4>
-              <strong>XSLT</strong>
-            </h4>
-            <p class="text-faded mb-0"></p>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="fab fa-node-js" style="font-size: 50px"></i></i>
-            </span>
-            <h4>
-              <strong>Javascript</strong>
-            </h4>
-            <p class="text-faded mb-0"></p>
-          </div>
-        </div>
+        <p>
+        </p>
+     
       </div>
     </section>
 
